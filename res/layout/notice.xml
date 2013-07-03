@@ -1,53 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- 帮助弹出框样式 -->
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="650dp"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center_horizontal"
-    android:layout_marginTop="45dp" >
-
-    <!-- 头部标题按钮 -->
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="5dp"
-        android:background="@drawable/notice_title_bg"
-        android:gravity="center"
-        android:text="公告栏"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
-    <ImageView
-        android:id="@+id/notice_exitbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:src="@drawable/dialog_exit" />
-
-    <ExpandableListView
-        android:id="@id/android:list"
-        android:layout_width="638dp"
-        android:layout_height="500dp"
-        android:layout_marginLeft="3dp"
-        android:layout_marginRight="3dp"
-        android:layout_marginTop="68dp"
-        android:background="@drawable/notice_main_bg"
-        android:cacheColorHint="#E6E6E6"
-        android:divider="@drawable/channel_list_divider"
-        android:drawSelectorOnTop="false"
-        android:fadingEdge="none"
-        android:scrollbars="vertical" />
-
-    <!--
-         <ProgressBar
-        android:id="@+id/helpLoadingBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone" />
-    -->
-
-</RelativeLayout>
