@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 详情页面顶部布局 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pCTopLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:background="@drawable/top_bar"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <Button
+        android:id="@+id/pCularTopBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="47dip"
+        android:background="@drawable/top_back" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="13dip"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/pCularTopBack"
+        android:text="@string/asset_detail"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="155dip"
+        android:layout_marginTop="5dp"
+        android:text="@string/maybe_like"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+</RelativeLayout>

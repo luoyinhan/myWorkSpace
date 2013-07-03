@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 页面  android:background="@drawable/bg_guess_like" -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="263dip"
+    android:layout_margin="10dip"
+    android:clickable="false"
+    android:focusable="false"
+    android:visibility="gone" >
+
+    <TextView
+        android:id="@+id/recommendTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="5dip"
+        android:layout_marginTop="5dip"
+        android:textColor="#4E4E4E"
+        android:textSize="20sp" />
+
+    <!-- 滚动栏 -->
+
+    <HorizontalScrollView
+        android:id="@+id/recBottemScrol"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/recommendTitle"
+        android:cacheColorHint="#00000000"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:id="@+id/recommendAsset"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" >
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <View
+        android:id="@+id/title_line"
+        android:layout_width="match_parent"
+        android:layout_height="2dip"
+        android:layout_below="@+id/recBottemScrol"
+        android:layout_margin="15dip"
+        android:background="@drawable/recommend_line"
+        android:gravity="center" />
+
+</RelativeLayout>

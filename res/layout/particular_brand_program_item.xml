@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 品牌节目详情    关联节目列表 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="10dip"
+    android:paddingTop="10dip" >
+
+    <TextView
+        android:id="@+id/programName"
+        android:layout_width="140dip"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dip"
+        android:singleLine="true"
+        android:textColor="#7f7f7f"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/programDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dip"
+        android:singleLine="true"
+        android:textColor="#7f7f7f"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/programTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="400dip"
+        android:singleLine="true"
+        android:textColor="#7f7f7f"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/programStutes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:textColor="#7f7f7f"
+        android:textSize="15sp" />
+
+</LinearLayout>

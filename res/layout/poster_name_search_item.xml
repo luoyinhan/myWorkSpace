@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 上面海报、中间名称、下面看点通用布局 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="136dip"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginLeft="15dip"
+    android:layout_marginRight="15dip"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dip"
+        android:scaleType="matrix"
+        android:src="@drawable/poster_border" />
+
+    <com.coship.ott.view.CustormImageView
+        android:id="@+id/assetPoster"
+        android:layout_width="118dip"
+        android:layout_height="166dip"
+        android:layout_margin="9dip"
+        android:scaleType="fitXY" />
+
+    <ImageView
+        android:id="@+id/gaoqingTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/tag_gaoqing"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/priceTag"
+        android:layout_width="5.5dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/assetPoster"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="1dip"
+        android:background="@drawable/tag_price"
+        android:gravity="center"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/selectTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/assetPoster"
+        android:layout_alignRight="@+id/assetPoster"
+        android:layout_margin="15dip"
+        android:background="@drawable/sel_tag"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/asset_name"
+        android:layout_width="136dip"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/assetPoster"
+        android:layout_marginLeft="6dip" >
+
+        <TextView
+            android:id="@+id/assetName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:maxWidth="100dp"
+            android:singleLine="true"
+            android:textColor="#830000"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/itemPlaybtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/item_play"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/assetAnticipation"
+        android:layout_width="136dip"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/asset_name"
+        android:layout_marginLeft="6dip"
+        android:singleLine="true"
+        android:textColor="#8a8a8a"
+        android:textSize="13.57dp" />
+
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="136dip"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/assetAnticipation"
+        android:layout_marginLeft="6dip"
+        android:singleLine="true"
+        android:textColor="#8a8a8a"
+        android:textSize="13.57dp"
+        android:visibility="gone" />
+
+</RelativeLayout>

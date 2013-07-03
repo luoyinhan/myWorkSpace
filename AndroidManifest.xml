@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.coship.ott.activity"
+    android:versionCode="1"
+    android:versionName="V1.1.1" >
+
+    <uses-sdk android:minSdkVersion="11" />
+
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.DEVICE_POWER" />
+    <uses-permission android:name="com.android.email.permission.ACCESS_PROVIDER" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_APN_SETTINGS" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.SET_TIME_ZONE" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.BROADCAST_WAP_PUSH" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+
+    <application
+        android:name="com.coship.ott.utils.MyApplication"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar" >
+        <activity
+            android:name="com.coship.ott.activity.MainTabHostActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.coship.ott.activity.RecommendActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".LiveActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.coship.ott.activity.VodActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.coship.ott.activity.RankActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.coship.ott.activity.FirstUseActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.unitend.udrm.ui.VideoPlayerActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.coship.ott.activity.ParticularActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.coship.ott.activity.ProgramParticularActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.coship.ott.activity.BrandParticularActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.coship.ott.activity.SearchActivity"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name="com.coship.ott.activity.UserCenterTabActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateVisible|adjustPan" />
+        <activity
+            android:name="com.coship.ott.activity.SearchResultActivity"
+            android:screenOrientation="landscape" />
+        <activity android:name="com.coship.ott.activity.CommonViewActivity" />
+        <activity
+            android:name="com.coship.ott.activity.HelpActivity"
+            android:theme="@android:style/Theme.Panel" />
+        <activity
+            android:name="com.coship.ott.activity.LoginActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Panel"
+            android:windowSoftInputMode="stateVisible|adjustPan" />
+        <activity
+            android:name="com.coship.ott.activity.UnOrderActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Panel" />
+        <activity
+            android:name="com.coship.ott.activity.UnDeviceBingDingActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Panel" />
+        <activity
+            android:name="com.coship.ott.activity.OrderTaoCanActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Panel" />
+        <activity
+            android:name="com.coship.ott.activity.AccountRegisterActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Panel"
+            android:windowSoftInputMode="stateVisible|adjustPan" />
+        <activity
+            android:name="com.coship.ott.activity.NextAccountRegsterActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Panel"
+            android:windowSoftInputMode="stateVisible|adjustPan" />
+        <activity
+            android:name=".FoundPassWordActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Panel" />
+        <activity
+            android:name=".ChangePassWordActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Panel" />
+        <activity
+            android:name=".ProgramIntroActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Panel" />
+        <activity
+            android:name=".NoticeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Panel" />
+        <activity
+            android:name=".SystemSettinngActivity"
+            android:screenOrientation="landscape" />
+
+        <receiver android:name="com.coship.ott.service.BootCompleteReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.coship.ott.service.BookNotifyService" />
+        <service
+            android:name="com.coship.ott.service.UpdateService"
+            android:enabled="true" />
+    </application>
+
+</manifest>

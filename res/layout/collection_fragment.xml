@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 登录弹出框样式 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg" >
+
+    <!-- 登录窗口主体 -->
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:smoothScrollbar="true"
+        android:stretchColumns="*" >
+
+        <LinearLayout
+            android:id="@+id/posterView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <RelativeLayout
+                android:id="@+id/btnLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dip" >
+
+                <ImageView
+                    android:id="@+id/editBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="55dip"
+                    android:src="@drawable/edit" />
+
+                <LinearLayout
+                    android:id="@+id/editingLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="55dip"
+                    android:visibility="gone" >
+
+                    <ImageView
+                        android:id="@+id/deleteAllBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dip"
+                        android:src="@drawable/delete_all" />
+
+                    <ImageView
+                        android:id="@+id/deleteBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dip"
+                        android:src="@drawable/delete" />
+
+                    <ImageView
+                        android:id="@+id/editCancel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/edit_cancel" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <GridView
+                android:id="@+id/movie_gridview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="56dip"
+                android:layout_marginLeft="55dip"
+                android:layout_marginRight="55dip"
+                android:layout_marginTop="15dip"
+                android:columnWidth="136dip"
+                android:gravity="center"
+                android:horizontalSpacing="50dip"
+                android:numColumns="5"
+                android:scrollbars="none"
+                android:verticalSpacing="20dip" />
+        </LinearLayout>
+    </TableLayout>
+
+</FrameLayout>

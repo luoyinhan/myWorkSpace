@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/pannel"
+    android:minHeight="400dp"
+    android:orientation="vertical"
+    android:paddingBottom="30dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="15dp" >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="40sp"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="@string/device_dialog_title"
+        android:textColor="@color/device_title"
+        android:textSize="24dip" />
+
+    <Button
+        android:id="@+id/close"
+        android:layout_width="fill_parent"
+        android:layout_height="50sp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/button"
+        android:maxHeight="50sp"
+        android:minHeight="40sp"
+        android:singleLine="true"
+        android:text="@string/device_dialog_close"
+        android:textSize="24dip"
+        android:textStyle="bold" />
+
+    <ListView
+        android:id="@+id/device_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/close"
+        android:layout_below="@id/title"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="20dp"
+        android:choiceMode="singleChoice"
+        android:divider="@drawable/divder"
+        android:fastScrollEnabled="true"
+        android:listSelector="#00000000"
+        android:scrollbars=""
+        android:scrollingCache="true" />
+    <!--
+    ImageView android:id="@+id/device_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@id/title"
+    android:layout_above="@id/close"
+    android:src="@drawable/tv01_hb_01"
+    android:contentDescription="pannel"
+    android:layout_marginTop="10dp"
+    /
+    -->
+
+</RelativeLayout>

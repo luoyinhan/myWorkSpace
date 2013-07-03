@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 直播 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical" >
+
+    <!-- 头部 -->
+
+    <include
+        android:id="@+id/topBar"
+        android:layout_alignParentTop="true"
+        layout="@layout/topbar" />
+    <!-- 底部 -->
+    <!-- 频道列表、播放窗口、EPG、品牌推荐 -->
+
+    <LinearLayout
+        android:id="@+id/liveContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topBar"
+        android:orientation="horizontal" >
+
+        <ListView
+            android:id="@+id/tabList"
+            android:layout_width="276dip"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="75dp"
+            android:cacheColorHint="#00000000"
+            android:divider="@drawable/channel_list_divider"
+            android:drawSelectorOnTop="true"
+            android:fadingEdge="none"
+            android:scrollbars="vertical" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/channel_line" />
+        <!-- 个人信息 -->
+        <!--
+            <ScrollView 
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_weight="1"
+           >
+        -->
+
+        <RelativeLayout
+            android:id="@+id/userMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dip"
+            android:layout_marginRight="115dip"
+            android:layout_marginTop="50dip" 
+            >
+
+            <!--
+            <TextView
+                android:id="@+id/baseMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dip"
+                android:text="@string/base_msg"
+                android:textColor="#820000"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/line1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/baseMsg"
+                android:background="@drawable/basic_msg_line1" />
+
+            <TextView
+                android:id="@+id/ca_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line1"
+                android:layout_marginBottom="5dip"
+                android:layout_marginTop="30dip"
+                android:text="@string/ca_no"
+                android:textColor="#8A8A8A"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/caNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line1"
+                android:layout_marginBottom="5dip"
+                android:layout_marginTop="30dip"
+                android:layout_toRightOf="@+id/ca_no"
+                android:textColor="#8A8A8A"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/line2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ca_no"
+                android:background="@drawable/basic_msg_line2" />
+
+            <TextView
+                android:id="@+id/weiboMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line2"
+                android:layout_marginBottom="5dip"
+                android:layout_marginTop="30dip"
+                android:text="@string/no_bind_weibo"
+                android:textColor="#8A8A8A"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/bindOrCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/line2"
+                android:layout_marginBottom="5dip"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/button_write"
+                android:text="@string/bind"
+                android:textColor="#484848"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/weiboMsg"
+                android:background="@drawable/basic_msg_line2" />
+            -->
+        </RelativeLayout>
+
+        <!-- 正在开发中 -->
+
+        <LinearLayout
+            android:id="@+id/coding"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:visibility="gone" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/coding"
+                android:textColor="#414142"
+                android:textSize="18sp" />
+
+            <include layout="@layout/user_authority_order" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/posterView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <RelativeLayout
+                android:id="@+id/btnLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dip" >
+
+                <ImageView
+                    android:id="@+id/editBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="55dip"
+                    android:src="@drawable/edit" />
+
+                <LinearLayout
+                    android:id="@+id/editingLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="55dip"
+                    android:visibility="gone" >
+
+                    <ImageView
+                        android:id="@+id/deleteAllBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dip"
+                        android:src="@drawable/delete_all" 
+                        />
+
+                    <ImageView
+                        android:id="@+id/deleteBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dip"
+                        android:src="@drawable/delete" />
+
+                    <ImageView
+                        android:id="@+id/editCancel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/edit_cancel" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <GridView
+                android:id="@+id/movie_gridview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="56dip"
+                android:layout_marginLeft="55dip"
+                android:layout_marginRight="55dip"
+                android:layout_marginTop="15dip"
+                android:columnWidth="136dip"
+                android:gravity="center"
+                android:horizontalSpacing="50dip"
+                android:numColumns="5"
+                android:scrollbars="none"
+                android:verticalSpacing="20dip" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

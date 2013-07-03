@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 头部小图样式 -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="3px" >
+
+    <ImageView
+        android:id="@+id/topSmallPicBG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+    <ImageView
+        android:id="@+id/topSmallPic"
+        android:layout_width="78px"
+        android:layout_height="45px"
+        android:layout_alignBottom="@id/topSmallPicBG"
+        android:layout_margin="2px"
+        android:scaleType="fitXY" />
+
+</RelativeLayout>

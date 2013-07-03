@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" 
+    android:paddingLeft="3sp"
+    android:paddingRight="3sp">
+    
+    <ImageView android:id="@+id/device_icon"
+        android:layout_width="42dip"
+        android:layout_height="42dip"
+        android:layout_alignParentLeft="true" />
+       
+    <FrameLayout android:id="@+id/deivce_state"
+        android:layout_width="48dip"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true">
+        
+     <RadioButton android:id="@+id/device_choice"
+        android:checked="false"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:button="@drawable/btn_device_item_select"
+        android:focusable="false"
+        android:clickable="false"
+        android:focusableInTouchMode="false"
+      />
+	  <ProgressBar android:id="@+id/progressbar"
+	   
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />       
+     </FrameLayout>
+   
+     <TextView
+         android:id="@+id/device_name"
+         android:layout_width="fill_parent"
+         android:layout_height="fill_parent"
+         android:layout_centerVertical="true"
+         android:layout_toLeftOf="@+id/deivce_state"
+         android:layout_toRightOf="@id/device_icon"
+         android:checkMark="@drawable/btn_device_item_select"
+         android:marqueeRepeatLimit="1"
+         android:paddingLeft="10dp"
+         android:singleLine="true"
+         android:textSize="20sp" />
+
+</RelativeLayout>

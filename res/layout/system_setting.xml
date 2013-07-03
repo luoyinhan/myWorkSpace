@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/topBar"
+        android:layout_alignParentTop="true"
+        layout="@layout/topbar" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:text="系 统"
+        android:textSize="26sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topBar"
+        android:layout_marginTop="15dip"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/item1"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_marginRight="10dip"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="请设置服务器地址："
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+
+            <EditText
+                android:id="@+id/editText1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:ems="10"
+                android:singleLine="true" >
+
+                <requestFocus />
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dip"
+            android:background="@color/gray"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="200dip"
+                android:layout_height="wrap_content"
+                android:text="TopWay Server"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button"
+                android:text="设置"
+                android:textSize="22sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dip"
+            android:background="@color/gray"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="200dip"
+                android:layout_height="wrap_content"
+                android:text="IDC Server   "
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button"
+                android:text="设置"
+                android:textSize="22sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dip"
+            android:background="@color/gray"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="200dip"
+                android:layout_height="wrap_content"
+                android:text="HuaShu"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button"
+                android:text="设置"
+                android:textSize="22sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/item3"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_marginRight="10dip"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dip"
+                android:background="@drawable/button"
+                android:text="确定"
+                android:textSize="22sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

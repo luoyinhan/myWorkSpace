@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 电影 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical" >
+
+    <!-- 头部 -->
+
+    <include
+        android:id="@+id/topBar"
+        android:layout_alignParentTop="true"
+        layout="@layout/topbar" />
+    <!-- 套餐分类 -->
+
+    <RelativeLayout
+        android:id="@+id/typeList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topBar"
+        android:background="@drawable/top_bg"
+        android:paddingTop="15dip" >
+
+        <TextView
+            android:id="@+id/feeType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:text="@string/vod_fee_type"
+            android:textColor="#7F7F7F"
+            android:textSize="14sp" />
+
+        <HorizontalScrollView
+            android:layout_width="800dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="20dp"
+            android:layout_toRightOf="@+id/feeType"
+            android:fillViewport="true"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:id="@+id/vodCategories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/typeSelect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="50dip"
+            android:text="@string/vod_type_select"
+            android:textColor="#7F7F7F"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <!-- 最热最新 -->
+
+    <LinearLayout
+        android:id="@+id/switcherList"
+        android:layout_width="match_parent"
+        android:layout_height="54dip"
+        android:layout_below="@+id/topBar"
+        android:layout_marginBottom="10dip"
+        android:layout_marginTop="47dip"
+        android:paddingLeft="67dp" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="760dip"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/switcher_bg" >
+
+            <TextView
+                android:id="@+id/movieNew"
+                android:layout_width="106dip"
+                android:layout_height="30dip"
+                android:gravity="center"
+                android:text="@string/vod_type_new"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/movieHot"
+                android:layout_width="106dip"
+                android:layout_height="30dip"
+                android:gravity="center"
+                android:text="@string/vod_type_hot"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/posterSwitcher"
+            android:layout_width="51dp"
+            android:layout_height="14dp"
+            android:layout_marginRight="20dip"
+            android:layout_marginTop="20dip"
+            android:background="@drawable/poster_switcher_sel" />
+
+        <Button
+            android:id="@+id/listSwitcher"
+            android:layout_width="51dp"
+            android:layout_height="14dp"
+            android:layout_marginRight="40dip"
+            android:layout_marginTop="20dip"
+            android:background="@drawable/list_switcher" />
+
+        <Button
+            android:id="@+id/typeMoreOpen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/more" />
+    </LinearLayout>
+
+    <!-- 数据 -->
+
+    <ListView
+        android:id="@+id/movie_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/switcherList"
+        android:layout_marginBottom="56dip"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:drawSelectorOnTop="true"
+        android:fadingEdge="none"
+        android:scrollbars="none"
+        android:visibility="gone" />
+
+    <GridView
+        android:id="@+id/movie_gridview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/switcherList"
+        android:layout_marginBottom="56dip"
+        android:layout_marginLeft="55dip"
+        android:layout_marginRight="55dip"
+        android:columnWidth="136dip"
+        android:gravity="center"
+        android:horizontalSpacing="70dip"
+        android:numColumns="6"
+        android:scrollbars="none"
+        android:verticalSpacing="20dip" />
+
+    <LinearLayout
+        android:id="@+id/typeMoveContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topBar"
+        android:layout_marginTop="47dip"
+        android:clickable="true"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/more_bg"
+            android:orientation="vertical"
+            android:paddingLeft="80dip" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/vod_type_type"
+                    android:textSize="14sp" />
+
+                <HorizontalScrollView
+                    android:layout_width="800dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="20dp"
+                    android:fillViewport="true"
+                    android:scrollbars="none" >
+
+                    <LinearLayout
+                        android:id="@+id/topMenu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" >
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/vod_type_type"
+                    android:textSize="14sp" />
+
+                <HorizontalScrollView
+                    android:layout_width="800dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="20dp"
+                    android:fillViewport="true"
+                    android:scrollbars="none" >
+
+                    <LinearLayout
+                        android:id="@+id/assetTypeLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" >
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/vod_type_originName"
+                    android:textSize="14sp" />
+
+                <HorizontalScrollView
+                    android:layout_width="800dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="20dp"
+                    android:fillViewport="true"
+                    android:scrollbars="none" >
+
+                    <LinearLayout
+                        android:id="@+id/originNameLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" >
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/vod_type_publishDate"
+                    android:textSize="14sp" />
+
+                <HorizontalScrollView
+                    android:layout_width="800dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="20dp"
+                    android:fillViewport="true"
+                    android:scrollbars="none" >
+
+                    <LinearLayout
+                        android:id="@+id/publishDateLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" >
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/typeMoreClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1205dip"
+            android:background="@drawable/more" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 直播海报加名称通用布局 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:layout_width="176dip"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/live_poster_border" />
+
+        <com.coship.ott.view.CustormImageView
+            android:id="@+id/livePoster"
+            android:layout_width="158dip"
+            android:layout_height="94dip"
+            android:layout_margin="10dip"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/gaoqingTag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/tag_gaoqing" />
+
+        <TextView
+            android:id="@+id/priceTag"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/livePoster"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="1dip"
+            android:background="@drawable/tag_price"
+            android:gravity="center"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/liveName"
+            android:layout_width="158dip"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/livePoster"
+            android:layout_marginLeft="3dip"
+            android:singleLine="true"
+            android:textColor="#830000"
+            android:textSize="14dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/infoContent"
+        android:layout_width="160dip"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dip"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/brandName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dip"
+            android:singleLine="true"
+            android:textColor="#820000"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/brandDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dip"
+            android:singleLine="true"
+            android:textColor="#8a8a8a"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/channelName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dip"
+            android:layout_marginTop="30dip"
+            android:singleLine="true"
+            android:textColor="#8a8a8a"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/brandTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dip"
+            android:singleLine="true"
+            android:textColor="#8a8a8a"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</LinearLayout>

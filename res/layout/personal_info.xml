@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 登录弹出框样式 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginTop="45dip"
+    android:background="@drawable/bg" >
+
+    <!-- 登录窗口主体 -->
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="50dip"
+        android:layout_marginRight="50dip"
+        android:layout_marginTop="30dip"
+        android:smoothScrollbar="true"
+        android:stretchColumns="*" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="left"
+                android:text="@string/personal_info"
+                android:textColor="#ff2200" />
+
+            <Button
+                android:id="@+id/returnButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/btn"
+                android:text="@string/personal_return" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_marginTop="10dip"
+            android:background="@color/silver" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dip" >
+
+            <TextView
+                android:id="@+id/user_nickname"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="left"
+                android:text="@string/user_nickname"
+                android:textColor="#484848"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/userNickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:layout_toRightOf="@+id/user_nickname"
+                android:background="@drawable/input_bg"
+                android:paddingLeft="3dip" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dip" >
+
+            <TextView
+                android:id="@+id/user_introduce"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="left"
+                android:text="@string/user_introduction"
+                android:textColor="#484848"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/userIntroduce"
+                android:layout_width="600dip"
+                android:layout_height="80dip"
+                android:layout_marginLeft="15dip"
+                android:layout_toRightOf="@+id/user_introduce"
+                android:background="@drawable/input_bg"
+                android:inputType="textMultiLine"
+                android:paddingLeft="3dip" />
+        </RelativeLayout>
+
+        <TableRow>
+
+            <TextView
+                android:text="@string/personal_contact_way"
+                android:textColor="#ff2200" />
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_marginTop="10dip"
+            android:background="@color/silver" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dip" >
+
+            <TextView
+                android:id="@+id/user_mail"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="left"
+                android:text="@string/user_mail"
+                android:textColor="#484848"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/userMail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:layout_toRightOf="@+id/user_mail"
+                android:background="@drawable/input_bg"
+                android:paddingLeft="3dip" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/user_phone_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dip" >
+
+            <TextView
+                android:id="@+id/user_phone"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="left"
+                android:text="@string/user_phone"
+                android:textColor="#484848"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/userPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:layout_toRightOf="@+id/user_phone"
+                android:background="@drawable/input_bg"
+                android:paddingLeft="3dip" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_phone_layout"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/helpSubmitButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dip"
+                android:layout_marginRight="30dip"
+                android:background="@drawable/btn_focus"
+                android:text="@string/login_submit" />
+
+            <Button
+                android:id="@+id/helpEmptyButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dip"
+                android:layout_marginRight="30dip"
+                android:background="@drawable/btn"
+                android:text="@string/login_empty" />
+        </LinearLayout>
+    </TableLayout>
+
+</RelativeLayout>

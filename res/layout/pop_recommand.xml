@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 播放器 推荐弹出窗口 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/popLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/pop_bg" >
+
+    <!-- 中间数据列表 -->
+
+    <GridView
+        android:id="@+id/popGridView"
+        android:layout_width="360dp"
+        android:layout_height="600dp"
+        android:layout_marginTop="10dp"
+        android:cacheColorHint="#00000000"
+        android:divider="@drawable/popup_list_divder"
+        android:drawSelectorOnTop="true"
+        android:fadingEdge="none"
+        android:horizontalSpacing="30dp"
+        android:numColumns="2"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:scrollbars="none"
+        android:verticalSpacing="20dp" />
+
+    <ProgressBar
+        android:id="@+id/popLoadingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

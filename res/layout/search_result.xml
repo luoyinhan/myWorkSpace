@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 电影 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:background="@drawable/top_bar"
+        android:gravity="center_vertical" >
+
+        <Button
+            android:id="@+id/search_backicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/top_back" />
+
+        <TextView
+            android:id="@+id/search_result_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/search_backicon"
+            android:text="@string/search_result_title"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/searchResult"
+            android:layout_width="1000dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/search_result_title"
+            android:singleLine="true"
+            android:textColor="#AAAAAA"
+            android:textSize="18dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/searchResultLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="95dip"
+        android:layout_marginTop="30dip"
+        android:background="@drawable/switch_bg"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/searchResultAll"
+            android:layout_width="106dip"
+            android:layout_height="wrap_content"
+            android:background="@drawable/switch_focus"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/searchResultVod"
+            android:layout_width="106dip"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/searchResultLive"
+            android:layout_width="106dip"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/recommendResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:singleLine="true"
+        android:textColor="#AAAAAA"
+        android:textSize="18dp"
+        android:visibility="gone" />
+    <!-- 搜索到影片，以列表显示 -->
+
+    <GridView
+        android:id="@+id/search_result_gridview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="20dip"
+        android:layout_marginLeft="64dip"
+        android:layout_marginRight="64dip"
+        android:layout_marginTop="20dip"
+        android:columnWidth="136dip"
+        android:horizontalSpacing="30dp"
+        android:numColumns="6" />
+
+</LinearLayout>

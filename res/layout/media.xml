@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/bg_main_app">
+
+	<TextView 
+	    android:id="@+id/indicate"
+	    android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:text="@string/input_ind"
+    	android:layout_marginLeft="10dp"
+    	android:layout_marginTop="10dp"
+    	android:textSize="20px"/>
+	
+	<EditText 
+	    android:id="@+id/url_input"
+	    android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:hint="@string/httpeg"
+    	android:imeOptions="actionDone"
+    	android:layout_below="@id/indicate"
+    	android:layout_marginLeft="10dp"
+    	android:layout_marginTop="10dp"
+    	android:layout_marginRight="10dp"/>
+
+	<Button android:id="@+id/push_btn"
+	    android:layout_width="wrap_content"
+    	android:layout_height="40dp"
+    	android:text="@string/pushMediaURL"
+    	android:layout_alignLeft="@id/url_input"
+    	android:layout_below="@id/url_input"/>
+	
+	<Button android:id="@+id/getinfo_btn"
+	    android:layout_width="wrap_content"
+	    android:layout_marginTop="20dp"
+    	android:layout_height="40dp"
+    	android:text="@string/getMediaInfo"
+    	android:layout_alignLeft="@id/push_btn"
+    	android:layout_below="@id/push_btn"/>
+	
+	<TextView android:id="@+id/director"
+	    android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:text="@string/director"
+    	android:layout_marginTop="10dp"
+    	android:layout_alignLeft="@id/getinfo_btn"
+    	android:layout_below="@id/getinfo_btn"/>
+	
+	<TextView android:id="@+id/info_director"
+	    android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:text="@string/empty"
+    	android:layout_marginTop="10dp"
+    	android:layout_marginLeft="10dp"
+		android:layout_toRightOf="@id/director"
+    	android:layout_below="@id/getinfo_btn"/>
+	
+	<TextView android:id="@+id/language"
+	    android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:text="@string/language"
+    	android:layout_marginTop="10dp"
+    	android:layout_alignLeft="@id/getinfo_btn"
+    	android:layout_below="@id/director"/>
+	
+	<TextView android:id="@+id/info_language"
+	    android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:text="@string/empty"
+    	android:layout_marginTop="10dp"
+    	android:layout_marginLeft="10dp"
+		android:layout_toRightOf="@id/language"
+    	android:layout_below="@id/director"/>
+
+	<RadioGroup
+	    android:id="@+id/radioGroup1"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignBottom="@+id/info_language"
+	    android:layout_alignRight="@+id/url_input"
+	    android:layout_marginRight="112dp" >
+
+		<RadioButton
+		    android:id="@+id/video_type"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:checked="true"
+		    android:text="@string/Video" />
+
+	    <RadioButton
+	        android:id="@+id/audio_type"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/Audio" />
+
+	    <RadioButton
+	        android:id="@+id/image_type"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/Image" />
+	</RadioGroup>
+	
+</RelativeLayout>

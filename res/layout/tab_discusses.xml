@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 详情页面 评论布局 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="830dip"
+    android:layout_height="match_parent"
+    android:background="@drawable/tab_bg"
+    android:orientation="vertical"
+    android:paddingLeft="10dip"
+    android:paddingRight="10dip"
+    android:paddingTop="36dip" >
+
+    <!-- 评论内容输入框 -->
+
+    <EditText
+        android:id="@+id/discussEditText"
+        android:layout_width="800dp"
+        android:layout_height="80dp"
+        android:background="#e1e1e2"
+        android:gravity="top"
+        android:hint="@string/particular_say_to_friends"
+        android:inputType="textMultiLine"
+        android:maxLength="140"
+        android:padding="5dp"
+        android:textColor="#7F7F7F" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="40dip"
+        android:layout_marginTop="10dip"
+        android:gravity="center" >
+
+        <CheckBox
+            android:id="@+id/isSendToSina"
+            android:layout_width="15dip"
+            android:layout_height="15dip"
+            android:layout_margin="5dip"
+            android:button="@drawable/check_box_selector" />
+
+        <ImageView
+            android:id="@+id/sendToSina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="500dip"
+            android:src="@drawable/discuss_sina" />
+
+        <TextView
+            android:id="@+id/fontNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginRight="10dip"
+            android:text="@string/dis_num"
+            android:textColor="#7F7F7F"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/publishComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/send_dis" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/parDiscussesList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="5dp"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:drawingCacheQuality="high"
+        android:fadingEdge="none" >
+    </ListView>
+
+</LinearLayout>

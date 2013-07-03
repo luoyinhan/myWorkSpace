@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/bg_mouse_app">
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="425px"
+        android:layout_height="210px"
+        android:layout_marginLeft="188px"
+        android:layout_marginTop="70px">
+
+        <Button
+            android:id="@+id/mouse_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:background="#000000ff" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/wheel_up"
+        android:layout_width="wrap_content"
+        android:layout_height="33dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_toRightOf="@id/relativeLayout1"
+        android:text="@string/wheel_up" />
+    
+    <Button
+        android:id="@+id/wheel_down"
+        android:layout_width="wrap_content"
+        android:layout_height="33dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/wheel_up"
+        android:layout_toRightOf="@id/relativeLayout1"
+        android:text="@string/wheel_down" />
+    
+    <Button
+        android:id="@+id/mouse_leftkey"
+        android:layout_width="wrap_content"
+        android:layout_height="33dp"
+        android:layout_below="@id/relativeLayout1"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="50dp"
+        android:text="@string/mouse_leftkey" />
+    
+    <Button
+        android:id="@+id/mouse_rightkey"
+        android:layout_width="wrap_content"
+        android:layout_height="33dp"
+        android:layout_below="@id/relativeLayout1"
+        android:layout_toRightOf="@id/mouse_leftkey"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/mouse_rightkey" />
+
+</RelativeLayout>

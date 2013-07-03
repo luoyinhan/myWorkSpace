@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 点播节目详情页面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/assetParView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/parMoiveTopBar"
+        layout="@layout/particular_top_bar" />
+
+    <!-- 分割线 -->
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="984dp"
+        android:scaleType="matrix"
+        android:src="@drawable/particular_right_bar" />
+    <!-- 左边 -->
+
+    <LinearLayout
+        android:layout_width="984dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="71dp"
+        android:orientation="vertical"
+        android:paddingLeft="95dp"
+        android:paddingRight="55dp" >
+
+        <include layout="@layout/particular_vod_detail" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip" >
+
+            <TextView
+                android:id="@+id/particularChapter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="25dip"
+                android:gravity="center"
+                android:text="@string/particular_chapter"
+                android:textColor="#7f7f7f"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/particularAssetDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="25dip"
+                android:gravity="center"
+                android:text="@string/particular_intro"
+                android:textColor="#7f7f7f"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/particularDiscusses"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/discusses"
+                android:textColor="#7f7f7f"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/resumeScorller"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/tab_bg"
+            android:padding="15dip"
+            android:scrollbars="none" >
+
+            <TextView
+                android:id="@+id/pCularAssetResume"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#7f7f7f"
+                android:textSize="16sp" />
+        </ScrollView>
+
+        <GridView
+            android:id="@+id/parChapterView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/tab_bg"
+            android:horizontalSpacing="25dip"
+            android:numColumns="10"
+            android:paddingBottom="8dip"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip"
+            android:paddingTop="8dip"
+            android:verticalSpacing="8dip"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/parConDiscusses"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            layout="@layout/tab_discusses" />
+    </LinearLayout>
+    <!-- 右侧关联数据 -->
+
+    <ListView
+        android:id="@+id/like_listview"
+        android:layout_width="136dip"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="100dip"
+        android:layout_marginTop="70dip"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:dividerHeight="25dip"
+        android:fadingEdge="none"
+        android:scrollbars="vertical" >
+    </ListView>
+
+</RelativeLayout>

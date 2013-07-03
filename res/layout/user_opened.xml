@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 登录弹出框样式 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="650dip"
+    android:layout_height="520dip"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="45dip"
+    android:background="@drawable/help_alert" >
+
+    <!-- 退出按钮 -->
+
+    <ImageView
+        android:id="@+id/helpExitBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/dialog_exit" />
+    <!-- 头部LOGO -->
+
+    <ImageView
+        android:id="@+id/headLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dip"
+        android:src="@drawable/top_logo" />
+
+    <!-- 登录窗口主体 -->
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="50dip"
+        android:layout_marginRight="50dip"
+        android:layout_marginTop="80dip"
+        android:smoothScrollbar="true"
+        android:stretchColumns="*" >
+
+        <TableRow>
+
+            <TextView
+                android:text="@string/user_contact_way"
+                android:textColor="#484848" />
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_marginTop="10dip"
+            android:background="@color/silver" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dip" >
+
+            <TextView
+                android:id="@+id/user_mail"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="right"
+                android:text="@string/user_mail"
+                android:textColor="#484848"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/userMail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:layout_toRightOf="@+id/user_mail"
+                android:background="@drawable/input_bg"
+                android:maxLength="32"
+                android:singleLine="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dip" >
+
+            <TextView
+                android:id="@+id/user_phone"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="right"
+                android:text="@string/user_phone"
+                android:textColor="#484848"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/userPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:layout_toRightOf="@+id/user_phone"
+                android:background="@drawable/input_bg"
+                android:maxLength="11"
+                android:singleLine="true" />
+        </RelativeLayout>
+
+        <TableRow>
+
+            <TextView
+                android:text="@string/user_more"
+                android:textColor="#484848" />
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_marginTop="10dip"
+            android:background="@color/silver" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dip" >
+
+            <TextView
+                android:id="@+id/user_nickname"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="right"
+                android:text="@string/user_nickname"
+                android:textColor="#484848"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/userNickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:layout_toRightOf="@+id/user_nickname"
+                android:background="@drawable/input_bg"
+                android:maxLength="32"
+                android:singleLine="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dip" >
+
+            <TextView
+                android:id="@+id/user_introduce"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="right"
+                android:text="@string/user_introduction"
+                android:textColor="#484848"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/Introduce"
+                android:layout_width="265dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:layout_toRightOf="@+id/user_introduce"
+                android:background="@drawable/input_bg"
+                android:lines="4"
+                android:maxLength="100"
+                android:paddingLeft="2dp"
+                android:paddingTop="2dp" />
+        </RelativeLayout>
+    </TableLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dip" >
+
+        <Button
+            android:id="@+id/helpSubmitButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/btn_focus"
+            android:text="@string/user_open_up" />
+    </RelativeLayout>
+
+</RelativeLayout>
